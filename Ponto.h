@@ -25,7 +25,8 @@ using namespace std;
 #include <glut.h>
 #endif
 
-class Ponto {
+class Ponto
+{
 
 public:
     float x,y,z;

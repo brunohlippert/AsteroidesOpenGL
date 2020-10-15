@@ -171,7 +171,7 @@
 1599003600 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\poligono.cpp
 	"Poligono.h"
 
-1599003470 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\poligono.h
+1602726845 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\poligono.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -194,17 +194,17 @@
 
 1298986600 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\gl\freeglut_ext.h
 
-1599694278 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\ponto.h
+1602726846 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\ponto.h
 	<iostream>
 	<windows.h>
 	<glut.h>
 	<GLUT/glut.h>
 	<glut.h>
 
-1599694381 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\ponto.cpp
+1602726844 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\ponto.cpp
 	"Ponto.h"
 
-1602726045 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\exibepoligonos.cpp
+1602730180 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\exibepoligonos.cpp
 	<iostream>
 	<cmath>
 	<ctime>
@@ -217,9 +217,56 @@
 	"Ponto.h"
 	"Poligono.h"
 	"Temporizador.h"
+	"CarregadorDeArquivos.h"
 
 1584988812 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\temporizador.h
 	<iostream>
 	<windows.h>
 	<sys/time.h>
+
+1602726845 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\temporizador.cpp
+	"Temporizador.h"
+
+1602733431 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\cores.cpp
+	"Cores.h"
+	<bits/stdc++.h>
+
+1602733431 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\cores.h
+	<iostream>
+	<windows.h>
+	<glut.h>
+	<GLUT/glut.h>
+	<glut.h>
+	<vector>
+	<iostream>
+	<fstream>
+
+1602733765 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.h
+	<iostream>
+	<windows.h>
+	<glut.h>
+	<GLUT/glut.h>
+	<glut.h>
+	"Cores.h"
+	"Nave.h"
+	<vector>
+	<iostream>
+	<fstream>
+
+1602733769 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.h
+	<iostream>
+	<windows.h>
+	<glut.h>
+	<GLUT/glut.h>
+	<glut.h>
+	"Cores.h"
+	<vector>
+	<iostream>
+	<fstream>
+
+1602733645 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.cpp
+	"CarregadorDeArquivos.h"
+
+1602733776 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.cpp
+	"Nave.h"
 

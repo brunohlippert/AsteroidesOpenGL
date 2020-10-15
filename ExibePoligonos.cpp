@@ -1,18 +1,3 @@
-// **********************************************************************
-// PUCRS/Escola PolitŽcnica
-// COMPUTA‚ÌO GRçFICA
-//
-// Programa basico para criar aplicacoes 2D em OpenGL
-//
-// Marcio Sarroglia Pinho
-// pinho@pucrs.br
-// **********************************************************************
-
-// Para uso no Xcode:
-// Abra o menu Product -> Scheme -> Edit Scheme -> Use custom working directory
-// Selecione a pasta onde voce descompactou o ZIP que continha este arquivo.
-//
-
 //Bruno Lippert
 
 #include <iostream>
@@ -42,6 +27,10 @@ using namespace std;
 #include "Poligono.h"
 
 #include "Temporizador.h"
+
+#include "CarregadorDeArquivos.h"
+
+CarregadorDeArquivos carregador;
 Temporizador T;
 double AccumDeltaT=0;
 
@@ -49,18 +38,19 @@ Ponto Min, Max;
 
 void init()
 {
-    // Define a cor do fundo da tela (AZUL)
-    glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+    // Define a cor do fundo da tela (BRANCO)
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
-    Min.x--;Min.y--;
-    Max.x++;Max.y++;
+    Min = Ponto(-50, -50);
+    Max = Ponto(50, 50);
+
+    carregador.carregaArquivos();
 }
 
 double nFrames=0;
 double TempoTotal=0;
-// **********************************************************************
-//
-// **********************************************************************
+
+
 void animate()
 {
     double dt;
@@ -112,20 +102,18 @@ void reshape( int w, int h )
 void display( void )
 {
 
-	// Limpa a tela coma cor de fundo
-	glClear(GL_COLOR_BUFFER_BIT);
+    // Limpa a tela coma cor de fundo
+    glClear(GL_COLOR_BUFFER_BIT);
 
     // Define os limites lógicos da área OpenGL dentro da Janela
-	glMatrixMode(GL_MODELVIEW);
+    glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-	// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-	// Coloque aqui as chamadas das rotinas que desenham os objetos
-	// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    // Coloque aqui as chamadas das rotinas que desenham os objetos
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-
-
-	glutSwapBuffers();
+    glutSwapBuffers();
 }
 // **********************************************************************
 // ContaTempo(double tempo)
@@ -158,17 +146,17 @@ void ContaTempo(double tempo)
 void keyboard ( unsigned char key, int x, int y )
 {
 
-	switch ( key )
-	{
-		case 27:        // Termina o programa qdo
-			exit ( 0 );   // a tecla ESC for pressionada
-			break;
-        case 't':
-            ContaTempo(3);
-            break;
-		default:
-			break;
-	}
+    switch ( key )
+    {
+    case 27:        // Termina o programa qdo
+        exit ( 0 );   // a tecla ESC for pressionada
+        break;
+    case 't':
+        ContaTempo(3);
+        break;
+    default:
+        break;
+    }
 }
 // **********************************************************************
 //  void arrow_keys ( int a_keys, int x, int y )
@@ -177,19 +165,19 @@ void keyboard ( unsigned char key, int x, int y )
 // **********************************************************************
 void arrow_keys ( int a_keys, int x, int y )
 {
-	switch ( a_keys )
-	{
-		case GLUT_KEY_UP:       // Se pressionar UP
-			glutFullScreen ( ); // Vai para Full Screen
-			break;
-	    case GLUT_KEY_DOWN:     // Se pressionar UP
-								// Reposiciona a janela
-            glutPositionWindow (50,50);
-			glutReshapeWindow ( 700, 500 );
-			break;
-		default:
-			break;
-	}
+    switch ( a_keys )
+    {
+    case GLUT_KEY_UP:       // Se pressionar UP
+        glutFullScreen ( ); // Vai para Full Screen
+        break;
+    case GLUT_KEY_DOWN:     // Se pressionar UP
+        // Reposiciona a janela
+        glutPositionWindow (50,50);
+        glutReshapeWindow ( 700, 500 );
+        break;
+    default:
+        break;
+    }
 }
 
 // **********************************************************************

@@ -23,7 +23,8 @@ void Ponto::set(float x, float y, float z)
     this->y = y;
     this->z = z;
 }
-void Ponto::imprime() {
+void Ponto::imprime()
+{
     cout << "(" << x << ", " << y << ")" << flush;
 }
 
@@ -36,7 +37,8 @@ void Ponto::desenha()
     glEnd();
 }
 
-void Ponto::setaCor(float red, float green, float blue){
+void Ponto::setaCor(float red, float green, float blue)
+{
     this->red = red;
     this->green = green;
     this->blue = blue;
