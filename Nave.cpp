@@ -1,4 +1,7 @@
 #include "Nave.h"
+#include <math.h>
+#define velocidadeRotacao 5
+#define PI 3.14159265
 Nave::Nave(){}
 
 Nave::Nave(int ** desenh, Cores core, int linha, int coluna){
@@ -8,12 +11,15 @@ Nave::Nave(int ** desenh, Cores core, int linha, int coluna){
     colunas = coluna;
 }
 
-Nave::Nave(Nave *nave, int vida){
+Nave::Nave(Nave *nave, int vida, int xInicial, int yInicial, int angInicial){
     desenho = nave->desenho;
     cores = nave->cores;
     vidas = vida;
     linhas = nave->linhas;
     colunas = nave->colunas;
+    x = xInicial;
+    y = yInicial;
+    ang = angInicial;
 }
 
 void Nave::desenhaQuadrado(){
@@ -48,11 +54,28 @@ void Nave::desenhaQuadradosDaNave(){
     glPopMatrix();
 }
 
-void Nave::desenhaNave(float x, float y, float ang){
+void Nave::desenhaNave(){
     glPushMatrix();
         glTranslatef(x, y, 0);
-        glTranslatef(-(colunas/2), linhas/2, 0);
         glRotatef(ang, 0, 0, 1);
+        glTranslatef(-(colunas/2), linhas/2, 0);
         this->desenhaQuadradosDaNave();
     glPopMatrix();
 }
+
+void Nave::rotacionaAntiHorario(){
+    ang += velocidadeRotacao;
+}
+
+void Nave::rotacionaHorario(){
+    ang -= velocidadeRotacao;
+}
+
+void Nave::moveParaFrente(){
+    float xu = 0 * cos(ang * PI / 180.0) - 1 * sin(ang * PI / 180.0);
+    float yu = 1 * cos(ang * PI / 180.0) + 0 * sin(ang * PI / 180.0);
+
+    x += xu;
+    y += yu;
+}
+

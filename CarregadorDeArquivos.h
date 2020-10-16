@@ -34,7 +34,7 @@ class CarregadorDeArquivos
     void carregaArquivoNave(const char *arquivo);
 public:
     void carregaArquivos();
-    Nave getInstanceDisparador(int vidas);
+    Nave getInstanceDisparador(int vidas, int xInicial, int yInicial, int angInicial);
 };
 
 #endif

@@ -31,17 +31,20 @@ private:
     int vidas;
     int linhas;
     int colunas;
+    float x;
+    float y;
+    int ang;
 
     void desenhaQuadradosDaNave();
     void desenhaQuadrado();
 public:
     Nave();
     Nave(int ** desenho, Cores cores, int linhas, int colunas);
-    Nave(Nave *nave, int vidas);
-    void desenhaNave(float x, float y, float ang);
-    //void moveParaFrente();
-    //void rotacionaAntiHorario();
-    //void rotacionaHorario();
+    Nave(Nave *nave, int vidas, int xInicial, int yInicial, int angInicial);
+    void desenhaNave();
+    void moveParaFrente();
+    void rotacionaAntiHorario();
+    void rotacionaHorario();
 };
 
 #endif

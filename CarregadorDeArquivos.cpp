@@ -71,9 +71,9 @@ void CarregadorDeArquivos::carregaArquivos(){
     carregaArquivoNave(arquivoDisparador);
 }
 
-Nave CarregadorDeArquivos::getInstanceDisparador(int vidas){
+Nave CarregadorDeArquivos::getInstanceDisparador(int vidas, int xInicial, int yInicial, int angInicial){
     Nave disparadorModelo = this->naves.at(0);
-    Nave instanciaDisparador = Nave(&disparadorModelo, vidas);
+    Nave instanciaDisparador = Nave(&disparadorModelo, vidas, xInicial, yInicial, angInicial);
 
     return instanciaDisparador;
 
