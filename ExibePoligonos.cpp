@@ -24,6 +24,7 @@ using namespace std;
 #endif
 
 #include "Ponto.h"
+#include "Nave.h"
 #include "Poligono.h"
 
 #include "Temporizador.h"
@@ -31,6 +32,10 @@ using namespace std;
 #include "CarregadorDeArquivos.h"
 
 CarregadorDeArquivos carregador;
+
+Nave disparador;
+int vidasDisparador = 3;
+
 Temporizador T;
 double AccumDeltaT=0;
 
@@ -39,17 +44,36 @@ Ponto Min, Max;
 void init()
 {
     // Define a cor do fundo da tela (BRANCO)
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
 
-    Min = Ponto(-50, -50);
-    Max = Ponto(50, 50);
+    Min = Ponto(-100, -100);
+    Max = Ponto(100, 100);
 
     carregador.carregaArquivos();
+
+    disparador = carregador.getInstanceDisparador(vidasDisparador);
 }
 
 double nFrames=0;
 double TempoTotal=0;
 
+
+void DesenhaEixos()
+{
+    Ponto Meio;
+    Meio.x = (Max.x+Min.x)/2;
+    Meio.y = (Max.y+Min.y)/2;
+    Meio.z = (Max.z+Min.z)/2;
+
+    glBegin(GL_LINES);
+    //  eixo horizontal
+        glVertex2f(Min.x,Meio.y);
+        glVertex2f(Max.x,Meio.y);
+    //  eixo vertical
+        glVertex2f(Meio.x,Min.y);
+        glVertex2f(Meio.x,Max.y);
+    glEnd();
+}
 
 void animate()
 {
@@ -109,9 +133,14 @@ void display( void )
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
+    glLineWidth(1);
+	glColor3f(1,1,1); // R, G, B  [0..1]
+    DesenhaEixos();
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     // Coloque aqui as chamadas das rotinas que desenham os objetos
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+    disparador.desenhaNave(0, 0, 0);
 
     glutSwapBuffers();
 }

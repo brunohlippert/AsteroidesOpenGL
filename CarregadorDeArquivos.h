@@ -29,13 +29,12 @@ using namespace std;
 class CarregadorDeArquivos
 {
     vector <Nave> naves;
-    Nave *disparador;
-    Cores *cores;
+    Cores cores;
     void carregaArquivoCores(const char *arquivo);
     void carregaArquivoNave(const char *arquivo);
-    void carregaArquivoDisparador(const char *arquivo);
 public:
     void carregaArquivos();
+    Nave getInstanceDisparador(int vidas);
 };
 
 #endif

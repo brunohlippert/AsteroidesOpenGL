@@ -27,6 +27,7 @@ class Cores
     int qtdCores;
     int ** listaDeCores;
 public:
+    Cores();
     Cores(int qtdCores);
     void adicionaCor(int id, int r, int g, int b);
     void getCor(int id, int* r, int* g, int* b);

@@ -25,11 +25,23 @@ using namespace std;
 
 class Nave
 {
+private:
     int ** desenho;
-    Cores *cores;
+    Cores cores;
     int vidas;
+    int linhas;
+    int colunas;
+
+    void desenhaQuadradosDaNave();
+    void desenhaQuadrado();
 public:
-    Nave(int ** desenho, Cores cores , int vidas);
+    Nave();
+    Nave(int ** desenho, Cores cores, int linhas, int colunas);
+    Nave(Nave *nave, int vidas);
+    void desenhaNave(float x, float y, float ang);
+    //void moveParaFrente();
+    //void rotacionaAntiHorario();
+    //void rotacionaHorario();
 };
 
 #endif

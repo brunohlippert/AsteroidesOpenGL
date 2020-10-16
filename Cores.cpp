@@ -1,6 +1,7 @@
 #include "Cores.h"
 #include<bits/stdc++.h>
 
+Cores::Cores(){}
 
 Cores::Cores(int qtdCores){
     this->qtdCores = qtdCores;

@@ -204,7 +204,7 @@
 1602726844 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\ponto.cpp
 	"Ponto.h"
 
-1602730180 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\exibepoligonos.cpp
+1602812972 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\exibepoligonos.cpp
 	<iostream>
 	<cmath>
 	<ctime>
@@ -215,6 +215,7 @@
 	<GLUT/glut.h>
 	<glut.h>
 	"Ponto.h"
+	"Nave.h"
 	"Poligono.h"
 	"Temporizador.h"
 	"CarregadorDeArquivos.h"
@@ -227,11 +228,11 @@
 1602726845 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\temporizador.cpp
 	"Temporizador.h"
 
-1602733431 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\cores.cpp
+1602813097 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\cores.cpp
 	"Cores.h"
 	<bits/stdc++.h>
 
-1602733431 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\cores.h
+1602813110 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\cores.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -241,7 +242,7 @@
 	<iostream>
 	<fstream>
 
-1602733765 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.h
+1602813125 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -253,7 +254,7 @@
 	<iostream>
 	<fstream>
 
-1602733769 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.h
+1602813067 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -264,9 +265,10 @@
 	<iostream>
 	<fstream>
 
-1602733645 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.cpp
+1602813563 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.cpp
 	"CarregadorDeArquivos.h"
+	<typeinfo>
 
-1602733776 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.cpp
+1602813611 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.cpp
 	"Nave.h"
 

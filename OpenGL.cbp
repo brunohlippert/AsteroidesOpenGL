@@ -61,11 +61,19 @@
 			<Add option="-Wno-narrowing" />
 			<Add option="-Wno-deprecated-declarations" />
 		</Compiler>
+		<Unit filename="CarregadorDeArquivos.cpp" />
+		<Unit filename="CarregadorDeArquivos.h" />
+		<Unit filename="Cores.cpp" />
+		<Unit filename="Cores.h" />
 		<Unit filename="ExibePoligonos.cpp" />
+		<Unit filename="Nave.cpp" />
+		<Unit filename="Nave.h" />
 		<Unit filename="Poligono.cpp" />
 		<Unit filename="Poligono.h" />
 		<Unit filename="Ponto.cpp" />
 		<Unit filename="Ponto.h" />
+		<Unit filename="Temporizador.cpp" />
+		<Unit filename="Temporizador.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
