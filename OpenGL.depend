@@ -301,11 +301,14 @@
 
 1603114683 /home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/GL/freeglut_ext.h
 
-1603115315 source:/home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/ExibePoligonos.cpp
+1603149476 source:/home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/ExibePoligonos.cpp
 	<iostream>
 	<cmath>
+	<math.h>
 	<ctime>
 	<fstream>
+	<random>
+	<cstring>
 	<windows.h>
 	<glut.h>
 	<sys/time.h>
@@ -324,7 +327,7 @@
 	<GLUT/glut.h>
 	<glut.h>
 
-1603115295 /home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/Nave.h
+1603147169 /home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/Nave.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -332,6 +335,7 @@
 	<glut.h>
 	"Cores.h"
 	"Ponto.h"
+	"Poligono.h"
 	<vector>
 	<iostream>
 	<fstream>
@@ -350,8 +354,9 @@
 	<windows.h>
 	<sys/time.h>
 
-1603114683 /home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/CarregadorDeArquivos.h
+1603147218 /home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/CarregadorDeArquivos.h
 	<iostream>
+	<random>
 	<windows.h>
 	<glut.h>
 	<GLUT/glut.h>
@@ -362,7 +367,7 @@
 	<iostream>
 	<fstream>
 
-1603114683 source:/home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/Nave.cpp
+1603149577 source:/home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/Nave.cpp
 	"Nave.h"
 	<math.h>
 
@@ -375,7 +380,7 @@
 1603114683 source:/home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/Temporizador.cpp
 	"Temporizador.h"
 
-1603114861 source:/home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/CarregadorDeArquivos.cpp
+1603147231 source:/home/brunolippert/Documents/pucrs/FCG/AsteroidesOpenGL/CarregadorDeArquivos.cpp
 	"CarregadorDeArquivos.h"
 	<typeinfo>
 	<cstring>

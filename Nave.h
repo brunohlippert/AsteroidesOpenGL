@@ -19,6 +19,7 @@ using namespace std;
 #endif
 #include "Cores.h"
 #include "Ponto.h"
+#include "Poligono.h"
 #include <vector>
 
 #include <iostream>
@@ -35,17 +36,35 @@ private:
     float x;
     float y;
     int ang;
+    float velocidade;
+
+    //Inimigos
+    Ponto inicial, curva, disparador;
+    float t;
+    bool statusCurva;
 
     void desenhaQuadradosDaNave();
     void desenhaQuadrado();
 public:
     Nave();
     Nave(int ** desenho, Cores cores, int linhas, int colunas);
-    Nave(Nave *nave, int vidas, int xInicial, int yInicial, int angInicial);
+    Nave(Nave *nave, int vidas, int xInicial, int yInicial, int angInicial, float velo);
     void desenhaNave();
-    void moveParaFrente(Ponto minP, Ponto maxP);
+    void moveParaFrente(Ponto minP, Ponto maxP, bool disparo);
     void rotacionaAntiHorario();
     void rotacionaHorario();
+    Ponto getRotacaoPonto(Ponto p, int ang);
+    void getPosicaoComAngulo(float* xP, float* yP, int* angP);
+    Poligono getEnvelope();
+    bool objetosColidem(Nave nave);
+    void desenhaEnvelope();
+    void perdeVida();
+    int getVidas();
+    float distancia(int xAux, int yAux);
+    bool finalizouCurva();
+
+    void novaCurva(Ponto disparadorAtual, Ponto curvaNovo);
+    void andaNaCurva();
 };
 
 #endif

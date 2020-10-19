@@ -3,7 +3,7 @@
 
 #include <iostream>
 using namespace std;
-
+#include <random>
 
 #ifdef WIN32
 #include <windows.h>
@@ -32,9 +32,12 @@ class CarregadorDeArquivos
     Cores cores;
     void carregaArquivoCores(const char *arquivo);
     void carregaArquivoNave(const char *arquivo);
+    int getRandomInRange(int minimo, int maximo);
 public:
     void carregaArquivos();
-    Nave getInstanceDisparador(int vidas, int xInicial, int yInicial, int angInicial);
+    Nave getInstanceDisparador(int vidas, int xInicial, int yInicial, int angInicial, float velocidade);
+    Nave getInstanceDisparo(int xInicial, int yInicial, int angInicial, float velocidade);
+    Nave getInstanceInimigo(int vidas, int xInicial, int yInicial, int angInicial, float velocidade);
 };
 
 #endif

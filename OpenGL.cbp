@@ -22,7 +22,7 @@
 					<Add library="GL" />
 					<Add library="GLU" />
 					<Add library="libglut" />
-					<Add library="jpeg" />
+					<Add library="lib/libjpeg-8b.a" />
 					<Add directory="lib" />
 				</Linker>
 			</Target>
