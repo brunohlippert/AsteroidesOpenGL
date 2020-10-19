@@ -1,6 +1,8 @@
 
 #include "CarregadorDeArquivos.h"
 #include <typeinfo>
+#include <cstring>
+
 void CarregadorDeArquivos::carregaArquivoNave(const char *arquivo){
     ifstream input;
     input.open(arquivo, ios::in);

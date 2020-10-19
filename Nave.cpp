@@ -71,11 +71,14 @@ void Nave::rotacionaHorario(){
     ang -= velocidadeRotacao;
 }
 
-void Nave::moveParaFrente(){
+void Nave::moveParaFrente(Ponto minP, Ponto maxP){
     float xu = 0 * cos(ang * PI / 180.0) - 1 * sin(ang * PI / 180.0);
     float yu = 1 * cos(ang * PI / 180.0) + 0 * sin(ang * PI / 180.0);
 
-    x += xu;
-    y += yu;
+    if (x + xu >= minP.x + 2 && x + xu <= maxP.x - 2)
+        x += xu;
+
+    if (y + yu >= minP.y + 2 && y + yu <= maxP.y - 2)
+        y += yu;
 }
 

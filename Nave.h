@@ -18,6 +18,7 @@ using namespace std;
 #include <glut.h>
 #endif
 #include "Cores.h"
+#include "Ponto.h"
 #include <vector>
 
 #include <iostream>
@@ -42,7 +43,7 @@ public:
     Nave(int ** desenho, Cores cores, int linhas, int colunas);
     Nave(Nave *nave, int vidas, int xInicial, int yInicial, int angInicial);
     void desenhaNave();
-    void moveParaFrente();
+    void moveParaFrente(Ponto minP, Ponto maxP);
     void rotacionaAntiHorario();
     void rotacionaHorario();
 };

@@ -39,7 +39,7 @@ int vidasDisparador = 3;
 Temporizador T;
 double AccumDeltaT=0;
 
-Ponto Min, Max;
+static Ponto Min, Max;
 
 void init()
 {
@@ -197,7 +197,7 @@ void arrow_keys ( int a_keys, int x, int y )
     switch ( a_keys )
     {
     case GLUT_KEY_UP:       // Se pressionar UP
-        disparador.moveParaFrente();
+        disparador.moveParaFrente(Min, Max);
         break;
     case GLUT_KEY_LEFT:
         disparador.rotacionaAntiHorario();
