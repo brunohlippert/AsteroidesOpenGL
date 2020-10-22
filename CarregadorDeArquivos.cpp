@@ -81,11 +81,13 @@ void CarregadorDeArquivos::carregaArquivos(){
 }
 
 int CarregadorDeArquivos::getRandomInRange(int minimo, int maximo){
-    std::random_device rd; // obtain a random number from hardware
-    std::mt19937 gen(rd()); // seed the generator
-    std::uniform_int_distribution<> distr(minimo, maximo); // define the range
-
-    return distr(gen);
+    static bool first = true;
+    if (first)
+    {
+      srand( time(NULL) ); //seeding for the first time only!
+      first = false;
+    }
+    return minimo + rand() % (( maximo + 1 ) - minimo);
 }
 
 Nave CarregadorDeArquivos::getInstanceDisparador(int vidas, int xInicial, int yInicial, int angInicial, float velocidade){

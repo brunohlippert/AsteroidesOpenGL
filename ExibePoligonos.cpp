@@ -6,11 +6,11 @@
 #include <ctime>
 #include <fstream>
 #include <random>
- #include <cstring>
+#include <cstring>
 
 using namespace std;
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <windows.h>
 #include <glut.h>
 #else
@@ -84,11 +84,13 @@ void dispararInimigo(Nave inimigo){
 }
 
 int getRandomInRange(int minimo, int maximo){
-    std::random_device rd; // obtain a random number from hardware
-    std::mt19937 gen(rd()); // seed the generator
-    std::uniform_int_distribution<> distr(minimo, maximo); // define the range
-
-    return distr(gen);
+    static bool first = true;
+    if (first)
+    {
+      srand( time(NULL) ); //seeding for the first time only!
+      first = false;
+    }
+    return minimo + rand() % (( maximo + 1 ) - minimo);
 }
 
 Ponto getRandomPontoDentroDaTela(){

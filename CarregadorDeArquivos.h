@@ -1,11 +1,11 @@
 #ifndef CarregadorDeArquivos_hpp
 #define CarregadorDeArquivos_hpp
-
+#include <ctime>
 #include <iostream>
 using namespace std;
 #include <random>
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <windows.h>
 #include <glut.h>
 #endif
@@ -25,6 +25,7 @@ using namespace std;
 
 #include <iostream>
 #include <fstream>
+#include <random>
 
 class CarregadorDeArquivos
 {

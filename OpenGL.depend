@@ -171,7 +171,7 @@
 1599003600 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\poligono.cpp
 	"Poligono.h"
 
-1602726845 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\poligono.h
+1603373576 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\poligono.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -194,7 +194,7 @@
 
 1298986600 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\gl\freeglut_ext.h
 
-1602726846 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\ponto.h
+1603373579 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\ponto.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -204,11 +204,14 @@
 1602726844 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\ponto.cpp
 	"Ponto.h"
 
-1602815204 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\exibepoligonos.cpp
+1603374951 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\exibepoligonos.cpp
 	<iostream>
 	<cmath>
+	<math.h>
 	<ctime>
 	<fstream>
+	<random>
+	<cstring>
 	<windows.h>
 	<glut.h>
 	<sys/time.h>
@@ -220,7 +223,7 @@
 	"Temporizador.h"
 	"CarregadorDeArquivos.h"
 
-1584988812 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\temporizador.h
+1603373581 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\temporizador.h
 	<iostream>
 	<windows.h>
 	<sys/time.h>
@@ -232,7 +235,7 @@
 	"Cores.h"
 	<bits/stdc++.h>
 
-1602813110 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\cores.h
+1603373569 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\cores.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -242,8 +245,10 @@
 	<iostream>
 	<fstream>
 
-1602814618 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.h
+1603374971 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.h
+	<ctime>
 	<iostream>
+	<random>
 	<windows.h>
 	<glut.h>
 	<GLUT/glut.h>
@@ -253,23 +258,27 @@
 	<vector>
 	<iostream>
 	<fstream>
+	<random>
 
-1602816213 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.h
+1603373573 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.h
 	<iostream>
 	<windows.h>
 	<glut.h>
 	<GLUT/glut.h>
 	<glut.h>
 	"Cores.h"
+	"Ponto.h"
+	"Poligono.h"
 	<vector>
 	<iostream>
 	<fstream>
 
-1602814576 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.cpp
+1603374958 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\carregadordearquivos.cpp
 	"CarregadorDeArquivos.h"
 	<typeinfo>
+	<cstring>
 
-1602816198 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.cpp
+1603372071 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.cpp
 	"Nave.h"
 	<math.h>
 
