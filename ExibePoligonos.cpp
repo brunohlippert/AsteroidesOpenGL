@@ -1,4 +1,4 @@
-//Bruno Lippert
+//Bruno Lippert e Pedro Chem
 
 #include <iostream>
 #include <cmath>
