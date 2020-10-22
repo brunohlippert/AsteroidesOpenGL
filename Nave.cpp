@@ -106,6 +106,17 @@ void Nave::moveParaFrente(Ponto minP, Ponto maxP, bool disparo){
     }
 }
 
+void Nave::moveParaTras(Ponto minP, Ponto maxP){
+    Ponto p = Ponto(0, -velocidade);
+    Ponto pRotacao = getRotacaoPonto(p, ang);
+
+    if (x + pRotacao.x >= minP.x + 2 && x + pRotacao.x <= maxP.x - 2)
+        x += pRotacao.x;
+    if (y + pRotacao.y >= minP.y + 2 && y + pRotacao.y <= maxP.y - 2)
+        y += pRotacao.y;
+
+}
+
 void Nave::getPosicaoComAngulo(float* xP, float* yP, int* angP){
     *xP = x;
     *yP = y;

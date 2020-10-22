@@ -51,6 +51,7 @@ public:
     Nave(Nave *nave, int vidas, int xInicial, int yInicial, int angInicial, float velo);
     void desenhaNave();
     void moveParaFrente(Ponto minP, Ponto maxP, bool disparo);
+    void moveParaTras(Ponto minP, Ponto maxP);
     void rotacionaAntiHorario();
     void rotacionaHorario();
     Ponto getRotacaoPonto(Ponto p, int ang);

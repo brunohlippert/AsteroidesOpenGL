@@ -260,7 +260,7 @@
 	<fstream>
 	<random>
 
-1603373573 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.h
+1603375173 c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -278,7 +278,7 @@
 	<typeinfo>
 	<cstring>
 
-1603372071 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.cpp
+1603375249 source:c:\users\pertu\documents\pucrs\fundamentoscg\trab2\poligonos\nave.cpp
 	"Nave.h"
 	<math.h>
 

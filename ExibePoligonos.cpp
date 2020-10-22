@@ -437,6 +437,9 @@ void arrow_keys ( int a_keys, int x, int y )
     case GLUT_KEY_RIGHT:
         disparador.rotacionaHorario();
         break;
+    case GLUT_KEY_DOWN:
+        disparador.moveParaTras(Min, Max);
+        break;
     default:
         break;
     }
